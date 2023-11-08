@@ -1,13 +1,14 @@
-import './App.css'
+import './index.css'
+import Navbar from './components/Navbar/Navbar'
+import PetSearch from './components/PetSearch/PetSearch'
 
 function App() {
 
   return (
-    <>
-      <div className='text-3xl font-bold underline'>
-        <h1>HappyTail</h1>
-      </div>
-    </>
+    <div className='flex align-center justify-center w-100 h-100'>
+      <Navbar/>
+      <PetSearch/>
+    </div>
   )
 }
 
