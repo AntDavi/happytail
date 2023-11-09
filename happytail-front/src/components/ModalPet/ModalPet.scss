@@ -1,0 +1,50 @@
+.app__modalpet {
+
+    z-index: 2;
+    position: absolute;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .app__modalpet-background {
+        background-color: rgba(0,0,0,0.5);
+
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .app__modal-content {
+        z-index: 3;
+        position: absolute;
+        background-color: #c1c1c1;
+
+        width: 100%;
+        max-width: 580px;
+
+        height: 100%;
+        max-height: 573px;
+
+        padding: 16px;
+
+
+        .app__modal-header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                h2 {
+                    margin-right: 8px;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}

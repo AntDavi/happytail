@@ -10,16 +10,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-}
-
-button {
-    background-color: #44B9FF;
-    padding: 16px 32px;
-    color: #fff;
-    font-weight: 700;
-    transition: .3s;
-
-    &:hover {
-        opacity: .8;
+    
+    button {
+        background-color: #44B9FF;
+        padding: 16px 32px;
+        color: #fff;
+        font-weight: 700;
+        transition: .3s;
+    
+        &:hover {
+            opacity: .8;
+        }
     }
 }
+
