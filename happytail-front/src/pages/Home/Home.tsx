@@ -4,6 +4,8 @@ import PetSearch from '../../components/PetSearch/PetSearch';
 import PetCard from '../../components/PetCard/PetCard';
 import ModalPet from '../../components/ModalPet/ModalPet';
 
+import LoginModal from '../../components/Login/Login';
+
 import './Home.scss';
 
 import Estopinha from '../../assets/estopinha.png';
@@ -11,6 +13,7 @@ import Estopinha from '../../assets/estopinha.png';
 // Interface para representar as informações do pet
 interface PetInfo {
     name: string;
+    imageSrc: string;
     gender: 'male' | 'female';
     breed: string;
     size: string;
@@ -30,9 +33,20 @@ const Home = () => {
         setSelectedPet(null);
     };
 
+    const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+
+    const openLoginModal = () => {
+        setIsLoginModalOpen(true);
+    };
+
+    const closeLoginModal = () => {
+        setIsLoginModalOpen(false);
+    };
+
     return (
         <div className='flex items-center justify-center flex-col w-[100%] h-[100vh]'>
-            <Navbar />
+              <Navbar openLoginModal={openLoginModal} />
+            {isLoginModalOpen && <LoginModal isOpen={isLoginModalOpen} onClose={closeLoginModal} />}
             <PetSearch />
 
             <div className='app__home-content grid grid-cols-5 gap-5'>
@@ -44,6 +58,7 @@ const Home = () => {
                     size="Pequeno"
                     onClick={() => handlePetCardClick({
                         name: "Estopinha",
+                        imageSrc: Estopinha,
                         gender: "female",
                         breed: "SRD",
                         size: "Pequeno",
@@ -57,6 +72,7 @@ const Home = () => {
                     size="Pequeno"
                     onClick={() => handlePetCardClick({
                         name: "Estopinha",
+                        imageSrc: Estopinha,
                         gender: "male",
                         breed: "SRD",
                         size: "Pequeno",
@@ -64,7 +80,7 @@ const Home = () => {
                 />
             </div>
 
-            <ModalPet isOpen={isModalOpen} onClose={closeModal} petInfo={selectedPet} />
+            <ModalPet isOpen={isModalOpen} onClose={closeModal} petInfo={selectedPet}/>
         </div>
     );
 };

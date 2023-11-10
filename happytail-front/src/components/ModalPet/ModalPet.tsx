@@ -2,12 +2,14 @@
 import React from 'react';
 
 import './ModalPet.scss';
+//import estopinha from '../../assets/estopinha.png'
 
 import { AiOutlineClose } from 'react-icons/ai'
 import { BiFemaleSign, BiMaleSign } from 'react-icons/bi';
 
 interface PetInfo {
     name: string;
+    imageSrc: string;
     gender: 'male' | 'female';
     breed: string;
     size: string;
@@ -45,6 +47,7 @@ const ModalPet: React.FC<ModalProps> = ({ isOpen, onClose, petInfo }) => {
                 </div>
                 <p>Raça: {petInfo?.breed}</p>
                 <p>Tamanho: {petInfo?.size}</p>
+                <img src={petInfo?.imageSrc} className="app__modal-image"/>
                 {/* Adicione outras informações adicionais do pet aqui */}
             </div>
         </div>

@@ -1,7 +1,8 @@
 import './Navbar.scss';
 import Logo from '../../assets/logo.png'
 
-const Navbar = () => {
+const Navbar = ({ openLoginModal }) => {
+    
     return (
         <nav className='app__navbar'>
             <div className="logo w-[80px] h-[80px]">
@@ -15,9 +16,7 @@ const Navbar = () => {
                     <a href="" className='text-l font-bold'>Doação</a>
                 </li>
             </ul>
-            <button className='app__navbar-button'>
-                Entrar
-            </button>
+            <button className='app__navbar-button' onClick={openLoginModal}>Entrar</button>
         </nav>
     )
 }
