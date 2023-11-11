@@ -38,8 +38,27 @@ const LoginModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                     </button>
                 </div>
 
+                <div className='flex items-center justify-center mb-4'>
+                    {isSignUp && (
+                        <>
+                            <button
+                                className={`app__registertypebutton ${registrationType === 'pessoal' ? 'selected' : ''} mr-2`}
+                                onClick={() => handleRegistrationType('pessoal')}
+                            >
+                                Pessoal
+                            </button>
+                            <button
+                                className={`app__registertypebutton ${registrationType === 'ong' ? 'selected' : ''}`}
+                                onClick={() => handleRegistrationType('ong')}
+                            >
+                                ONG
+                            </button>
+                        </>
+                    )}
+                </div>
+
                 {isSignUp ? (
-                    <div className='app__signupfield'>
+                    <div className='app__signupfield flex flex-col items-center justify-center'>
                         <TextField id="outlined-basic" label="Nome" variant="outlined" className='app__field' />
                         <TextField id="outlined-basic" label="Email" variant="outlined" className='app__field' />
                         <TextField id="outlined-basic" label="Senha" variant="outlined" type="password" className='app__field' />
@@ -47,10 +66,10 @@ const LoginModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                         {registrationType === 'ong' && (
                             <>
                                 <TextField id="outlined-basic" label="CNPJ" variant="outlined" className='app__field' />
-                                <TextField id="outlined-basic" label="Cidade" variant="outlined" className='app__field' />
-                                <TextField id="outlined-basic" label="Estado" variant="outlined" className='app__field' />
-                                <TextField id="outlined-basic" label="Endereço" variant="outlined" className='app__field' />
-                                <TextField id="outlined-basic" label="Bairro" variant="outlined" className='app__field' />
+                                <div>
+                                    <TextField id="outlined-basic" label="Endereço" variant="outlined" className='app__field short' />
+                                    <TextField id="outlined-basic" label="Bairro" variant="outlined" className='app__field short' />    
+                                </div>
                                 <TextField id="outlined-basic" label="CEP" variant="outlined" className='app__field' />
                             </>
                         )}
@@ -74,22 +93,6 @@ const LoginModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                     <button className='app__changebutton' onClick={handleToggleSignUp}>
                         {isSignUp ? 'Já tem uma conta? Faça login' : 'Criar uma conta'}
                     </button>
-                    {isSignUp && (
-                        <>
-                            <button
-                                className={`app__registertypebutton ${registrationType === 'pessoal' ? 'selected' : ''}`}
-                                onClick={() => handleRegistrationType('pessoal')}
-                            >
-                                Pessoal
-                            </button>
-                            <button
-                                className={`app__registertypebutton ${registrationType === 'ong' ? 'selected' : ''}`}
-                                onClick={() => handleRegistrationType('ong')}
-                            >
-                                ONG
-                            </button>
-                        </>
-                    )}
                 </div>
             </div>
         </div>
