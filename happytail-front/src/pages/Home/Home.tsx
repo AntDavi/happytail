@@ -17,6 +17,8 @@ interface PetInfo {
     gender: 'male' | 'female';
     breed: string;
     size: string;
+    age: string;
+    temperance: string;
 }
 
 const Home = () => {
@@ -62,6 +64,8 @@ const Home = () => {
                         gender: "female",
                         breed: "SRD",
                         size: "Pequeno",
+                        age: "3",
+                        temperance: "Dócil"
                     })}
                 />
                 <PetCard
@@ -76,6 +80,8 @@ const Home = () => {
                         gender: "male",
                         breed: "SRD",
                         size: "Pequeno",
+                        temperance: "Dócil",
+                        age: "3"
                     })}
                 />
             </div>

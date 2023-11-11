@@ -3,12 +3,14 @@ import './Login.scss';
 import icon from '../../assets/X.png';
 import Line from '../../assets/Line 1.png';
 
+import { TextField } from '@mui/material';
+
 interface ModalProps {
     isOpen: boolean;
     onClose: () => void;
 }
 
-const LoginModal: React.FC<ModalProps> = ({ isOpen, onClose}) => {
+const LoginModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     if (!isOpen) {
         return null;
     }
@@ -25,8 +27,9 @@ const LoginModal: React.FC<ModalProps> = ({ isOpen, onClose}) => {
                 </div>
 
                 <div className='app__loginfield'>
-                    <input type="text" name="Email" placeholder="Digite seu email" className='app__field'/>
-                    <input type="text" name="Senha" placeholder="Digite sua senha" className='app__field'/>
+                    <TextField id="outlined-basic" label="Digite seu email" variant="outlined" className='app__field' />
+                    <TextField id="outlined-basic" label="Digite sua senha" variant="outlined" 
+                    type="password" className='app__field'/>
                     <button className='app__loginbutton'>
                         Entrar
                     </button>
