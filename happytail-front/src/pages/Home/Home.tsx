@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
-import { db } from "../../config/firebase";
+import { db, auth } from "../../config/firebase";
 import Navbar from "../../components/Navbar/Navbar";
 import PetSearch from "../../components/PetSearch/PetSearch";
 import PetCard from "../../components/PetCard/PetCard";
 import ModalPet from "../../components/ModalPet/ModalPet";
-
 import LoginModal from "../../components/Login/Login";
 
 import "./Home.scss";
@@ -76,6 +75,7 @@ const Home = () => {
   };
 
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false); // novo estado
 
   const openLoginModal = () => {
     setIsLoginModalOpen(true);
@@ -85,9 +85,23 @@ const Home = () => {
     setIsLoginModalOpen(false);
   };
 
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      // Verificar se o usuário está logado
+      if (user) {
+        setIsUserLoggedIn(true);
+      } else {
+        setIsUserLoggedIn(false);
+      }
+    });
+
+    // Limpar o listener de autenticação ao desmontar o componente
+    return () => unsubscribe();
+  }, []);
+
   return (
     <div className="flex items-center justify-center flex-col w-[100%] h-[100vh]">
-      <Navbar openLoginModal={openLoginModal} />
+      <Navbar openLoginModal={openLoginModal} isUserLoggedIn={isUserLoggedIn} />
       {isLoginModalOpen && (
         <LoginModal isOpen={isLoginModalOpen} onClose={closeLoginModal} />
       )}
