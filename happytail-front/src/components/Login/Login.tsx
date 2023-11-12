@@ -83,7 +83,7 @@ const LoginModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         {isSignUp ? (
           <div className="app__signupfield flex flex-col items-center justify-center">
             <TextField
-              id="outlined-basic"
+              id="outlined-name"
               label="Nome"
               variant="outlined"
               className="app__field"
@@ -91,7 +91,7 @@ const LoginModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               onChange={(e) => setSignupName(e.target.value)}
             />
             <TextField
-              id="outlined-basic"
+              id="outlined-email"
               label="Email"
               variant="outlined"
               className="app__field"
@@ -99,7 +99,7 @@ const LoginModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               onChange={(e) => setSignupEmail(e.target.value)}
             />
             <TextField
-              id="outlined-basic"
+              id="outlined-pass"
               label="Senha"
               variant="outlined"
               type="password"
@@ -111,7 +111,7 @@ const LoginModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             {registrationType === "ong" && (
               <>
                 <TextField
-                  id="outlined-basic"
+                  id="outlined-cnpj"
                   label="CNPJ"
                   variant="outlined"
                   className="app__field"
@@ -120,7 +120,7 @@ const LoginModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                 />
                 <div>
                   <TextField
-                    id="outlined-basic"
+                    id="outlined-adress"
                     label="Endereço"
                     variant="outlined"
                     className="app__field short"
@@ -128,7 +128,7 @@ const LoginModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                     onChange={(e) => setEndereco(e.target.value)}
                   />
                   <TextField
-                    id="outlined-basic"
+                    id="outlined-bairro"
                     label="Bairro"
                     variant="outlined"
                     className="app__field short"
@@ -137,7 +137,7 @@ const LoginModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                   />
                 </div>
                 <TextField
-                  id="outlined-basic"
+                  id="outlined-cep"
                   label="CEP"
                   variant="outlined"
                   className="app__field"
@@ -162,7 +162,7 @@ const LoginModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         ) : (
           <div className="app__loginfield">
             <TextField
-              id="outlined-basic"
+              id="outlined-login-email"
               label="Digite seu email"
               variant="outlined"
               className="app__field"
@@ -170,7 +170,7 @@ const LoginModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               onChange={(e) => setLoginEmail(e.target.value)}
             />
             <TextField
-              id="outlined-basic"
+              id="outlined-login-pass"
               label="Digite sua senha"
               variant="outlined"
               type="password"
