@@ -14,7 +14,7 @@ HappyTail é uma plataforma online que tem como principal objetivo a facilitar o
 - [✅] Cadastro de Pessoas Físicas
 - [✅] Cadastro de ONGs
 - [✅] Disponibilizar de PETs para adoção
-- [✅] Disponibilizar doações monetarias (PIX)
+- [⌛] Disponibilizar doações monetarias (PIX)
 - [⌛] Marcar entrevista de adoção
 - [⌛] Integração com Stripe para outras formas de doação
 - [⌛] Integração com GPS para encontrar locais para doar algum animal para adoção
