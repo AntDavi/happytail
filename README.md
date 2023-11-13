@@ -1,5 +1,3 @@
-<h1 align="center"> HappyTail </h1>
-
 <p align="center">
   <img alt="nlw-setup-mobile" src="happytail-front/cover.png" width="100%">
 </p>
