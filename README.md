@@ -25,6 +25,7 @@ HappyTail é uma plataforma online que tem como principal objetivo a facilitar o
 Esse projeto foi desenvolvido com as seguintes tecnolgias:
 
 - [ReactJS](https://reactnative.dev/)
+- [Vite](https://vitejs.dev/)
 - [Typescript](https://www.typescriptlang.org/)
 - [TailWind](https://tailwindcss.com/)
 - [MaterialUI](https://mui.com/material-ui/)
