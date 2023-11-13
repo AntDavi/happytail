@@ -2,6 +2,9 @@
   <img alt="nlw-setup-mobile" src="happytail-front/cover.png" width="100%">
 </p>
 
+<p align="center">
+  🚧 Ainda em construção... 🚧
+</p>
 
 ## 💻 Projeto
 
