@@ -23,9 +23,9 @@ const ModalPet: React.FC<ModalProps> = ({ isOpen, onClose, petInfo }) => {
     );
 
   return (
-    <div className="app__modalpet">
+    <div className="app__modalpet ">
       <div className="app__modalpet-background"></div>
-      <div className="app__modal-content">
+      <div className="app__modal-content shadow-lg">
         <div className="app__modal-header">
           <div>
             <h2>{petInfo?.name}</h2>
@@ -39,15 +39,35 @@ const ModalPet: React.FC<ModalProps> = ({ isOpen, onClose, petInfo }) => {
 
         <div className="pet-modal-dividor"></div>
 
-        <p className="app__modal-description">{petInfo?.temperament}</p>
+        <p className="app__modal-description text-center">{petInfo?.temperament}
+        </p>
 
         <div className="modal-infos">
-          <p>Raça: {petInfo?.breed}</p>
-          <p>Porte: {petInfo?.size}</p>
-          <p>Temperamento: {petInfo?.temperament}</p>
-          <p>Idade: {petInfo?.age} anos</p>
+          <div>
+            <p className="text-gray-400 text-sm">Raça:</p>
+            <p>{petInfo?.breed}</p>
+          </div>
+          <div>
+            <p className="text-gray-400 text-sm">Porte:</p>
+            <p> {petInfo?.size}</p>
+          </div>
+          <div>
+            <p className="text-gray-400 text-sm">Temperamento:</p>
+            <p>{petInfo?.temperament}</p>
+          </div>
+          <div>
+            <p className="text-gray-400 text-sm">Idade:</p>
+            <p>{petInfo?.age} anos</p>
+          </div>
+
+
+
           {/* Adicione outras informações adicionais do pet aqui */}
         </div>
+
+        <button className='schedule mt-5'>
+          Candidatar-se
+        </button>
       </div>
     </div>
   );

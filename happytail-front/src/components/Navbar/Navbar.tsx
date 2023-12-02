@@ -11,16 +11,16 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ openLoginModal, isUserLoggedIn }) => {
   return (
-    <nav className='app__navbar'>
-      <div className="logo w-[80px] h-[80px]">
+    <nav className='app__navbar h-[70px] shadow-lg'>
+      <div className="logo w-[60px] h-[60px]">
         <img src={Logo} alt="" />
       </div>
       <ul className='flex-row flex'>
         <li>
-          <a href="" className='text-l font-bold'>Adoção</a>
+          <a href="" className='text-l font-bold text-[#454545]'>Adoção</a>
         </li>
         <li className='ml-5'>
-          <a href="" className='text-l font-bold'>Doação</a>
+          <a href="" className='text-l font-bold text-[#454545]'>Doação</a>
         </li>
       </ul>
       {isUserLoggedIn ? (

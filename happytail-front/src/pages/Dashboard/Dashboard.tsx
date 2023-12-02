@@ -29,8 +29,8 @@ const Dashboard: React.FC<DashboardProps> = ({ ongName }) => {
     };
 
     const pets: PetInfo[] = [
-        { name: 'Pet1', gender: 'male', breed: 'Breed1', size: 'Small' },
-        { name: 'Pet2', gender: 'female', breed: 'Breed2', size: 'Medium' },
+        { name: 'Lulu', gender: 'female', breed: 'Poodle', size: 'Pequeno' },
+        { name: 'Max', gender: 'male', breed: 'SRD', size: 'Medio' },
         // Adicione mais pets conforme necessário
     ];
 
@@ -38,7 +38,7 @@ const Dashboard: React.FC<DashboardProps> = ({ ongName }) => {
         <div className="dashboard">
             <div className="sidebar flex items-center justify-between">
                 <div className="ong-info flex flex-col items-center">
-                    <BsFillPersonFill size={30} className="mb-3"/>
+                    <BsFillPersonFill size={30} className="mb-3" />
                     <p className="ong-name">{ongName}</p>
                 </div>
                 <div className="logout">

@@ -24,7 +24,7 @@ const PetCard: React.FC<PetCardProps> = ({
     gender === "male" ? <BiMaleSign size={24} /> : <BiFemaleSign size={24} />;
 
   return (
-    <div className="app__petcard" onClick={onClick}>
+    <div className="app__petcard shadow-md" onClick={onClick}>
       <img src={imageSrc} alt={name} />
       <div className="app__petcard-header">
         <h2>{name}</h2>

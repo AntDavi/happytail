@@ -35,7 +35,7 @@ const PetSearch = () => {
 
 
     return (
-        <div className='app__petresearch'>
+        <div className='app__petresearch shadow-md'>
             <DropDownResearch
                 label="Espécies"
                 value={specie}

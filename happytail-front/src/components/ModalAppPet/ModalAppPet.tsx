@@ -64,6 +64,7 @@ const ModalAppPet: React.FC<ModalAppPetProps> = ({ isOpen, onClose, onAddPet }) 
                 </div>
 
                 <div className="form-fields flex flex-col items-center justify-center">
+
                     <TextField
                         id="outlined-photo"
                         label="Adição de foto"
@@ -72,24 +73,27 @@ const ModalAppPet: React.FC<ModalAppPetProps> = ({ isOpen, onClose, onAddPet }) 
                         value={petData.photo}
                         onChange={(e) => handleInputChange("photo", e.target.value)}
                     />
+                    <div className="flex justify-between w-full gap-2">
+                        <TextField
+                            id="outlined-name"
+                            label="Nome do Pet"
+                            variant="outlined"
+                            className="app__field"
+                            value={petData.name}
+                            onChange={(e) => handleInputChange("name", e.target.value)}
+                        />
 
-                    <TextField
-                        id="outlined-name"
-                        label="Nome do Pet"
-                        variant="outlined"
-                        className="app__field"
-                        value={petData.name}
-                        onChange={(e) => handleInputChange("name", e.target.value)}
-                    />
+                        <TextField
+                            id="outlined-age"
+                            label="Idade"
+                            variant="outlined"
+                            className="app__field"
+                            value={petData.age}
+                            onChange={(e) => handleInputChange("age", e.target.value)}
+                        />
 
-                    <TextField
-                        id="outlined-age"
-                        label="Idade"
-                        variant="outlined"
-                        className="app__field"
-                        value={petData.age}
-                        onChange={(e) => handleInputChange("age", e.target.value)}
-                    />
+                    </div>
+
 
                     <TextField
                         id="outlined-temperament"
@@ -118,23 +122,25 @@ const ModalAppPet: React.FC<ModalAppPetProps> = ({ isOpen, onClose, onAddPet }) 
                         onChange={(e) => handleInputChange("gender", e.target.value)}
                     />
 
-                    <TextField
-                        id="outlined-breed"
-                        label="Raça"
-                        variant="outlined"
-                        className="app__field"
-                        value={petData.breed}
-                        onChange={(e) => handleInputChange("breed", e.target.value)}
-                    />
+                    <div className="flex justify-between w-full gap-2">
+                        <TextField
+                            id="outlined-breed"
+                            label="Raça"
+                            variant="outlined"
+                            className="app__field"
+                            value={petData.breed}
+                            onChange={(e) => handleInputChange("breed", e.target.value)}
+                        />
 
-                    <TextField
-                        id="outlined-species"
-                        label="Espécie"
-                        variant="outlined"
-                        className="app__field"
-                        value={petData.species}
-                        onChange={(e) => handleInputChange("species", e.target.value)}
-                    />
+                        <TextField
+                            id="outlined-species"
+                            label="Espécie"
+                            variant="outlined"
+                            className="app__field"
+                            value={petData.species}
+                            onChange={(e) => handleInputChange("species", e.target.value)}
+                        />
+                    </div>
 
                     <TextField
                         id="outlined-description"
@@ -148,8 +154,8 @@ const ModalAppPet: React.FC<ModalAppPetProps> = ({ isOpen, onClose, onAddPet }) 
                     />
                 </div>
 
-                <div className="button-container">
-                    <Button variant="contained" onClick={handleAddPet}>
+                <div className="button-container mt-5">
+                    <Button variant="contained" onClick={handleAddPet} className="register">
                         Cadastrar PET
                     </Button>
                 </div>

@@ -1,8 +1,17 @@
 .app__petcard {
     width: 250px;
     height: 350px;
-    background-color: #c1c1c1;;
+    background-color: #FFFFF3;
+    border: .5px solid #454545;
     padding: 16px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    img {
+        border-radius: 4px;
+    }
 
     .app__petcard-header {
         display: flex;

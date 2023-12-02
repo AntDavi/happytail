@@ -6,15 +6,16 @@
   🚧 Ainda em construção... 🚧
 </h1>
 
+
 ## 💻 Projeto
 
-HappyTail é uma plataforma online que tem como principal objetivo a facilitar o processo de adoção de pets de ONGs protetora dos animais assim com as mesmas receberem doações de recursos e animaizinhos dispostos para adoção.
+HappyTail é uma plataforma online que tem como principal objetivo facilitar o processo de adoção de pets de ONGs protetora dos animais assim com as mesmas receberem doações de recursos e PETs dispostos para adoção.
 
 ## Funcionalidades
 
 - [✅] Cadastro de Pessoas Físicas
 - [✅] Cadastro de ONGs
-- [✅] Disponibilizar de PETs para adoção
+- [✅] Disponibilizar PETs para adoção
 - [⌛] Disponibilizar doações monetarias (PIX)
 - [⌛] Marcar entrevista de adoção
 - [⌛] Integração com Stripe para outras formas de doação
